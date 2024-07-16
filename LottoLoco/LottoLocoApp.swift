@@ -14,8 +14,8 @@ struct LottoLocoApp: App {
         WindowGroup {
             LottoNumberGeneratorView(
                 store: Store(
-                    initialState: LottoNumberGenerator.State(),
-                    reducer: {LottoNumberGenerator() }
+                    initialState: LottoNumberGeneratorCore.State(),
+                    reducer: {LottoNumberGeneratorCore() }
                 ))
         }
     }

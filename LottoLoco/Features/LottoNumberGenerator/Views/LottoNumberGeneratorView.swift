@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LottoNumberGeneratorView: View {
     // MARK: - Properties
-    let store: StoreOf<LottoNumberGenerator>
+    let store: StoreOf<LottoNumberGeneratorCore>
 
     // MARK: - Body
     var body: some View {
@@ -52,10 +52,11 @@ struct LottoNumberGeneratorView_Previews: PreviewProvider {
     static var previews: some View {
         LottoNumberGeneratorView(
             store: Store(
-                initialState: LottoNumberGenerator.State(),
-                reducer: { LottoNumberGenerator(environment: LottoNumberGenerator.Environment {
-                    (1...45).shuffled().prefix(6).sorted()
-                }) }
+                initialState: LottoNumberGeneratorCore.State(),
+                reducer: { LottoNumberGeneratorCore() },
+                withDependencies: {
+                    $0.lottoNumberGeneratorClient = .dummyValue
+                }
             )
         )
     }

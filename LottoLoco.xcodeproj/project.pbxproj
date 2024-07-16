@@ -17,6 +17,7 @@
 		E3458C812C32D9A1003A08B8 /* LottoNumberGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3458C802C32D9A1003A08B8 /* LottoNumberGeneratorView.swift */; };
 		E3458C832C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3458C822C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift */; };
 		E3BE99872C36414B0045D933 /* LottoNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE99862C36414B0045D933 /* LottoNumberView.swift */; };
+		E3CFD8642C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E3458C802C32D9A1003A08B8 /* LottoNumberGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGeneratorView.swift; sourceTree = "<group>"; };
 		E3458C822C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGeneratorCore.swift; sourceTree = "<group>"; };
 		E3BE99862C36414B0045D933 /* LottoNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberView.swift; sourceTree = "<group>"; };
+		E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGeneratorClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		E3458C7F2C32D98F003A08B8 /* LottoNumberGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				E3CFD8622C46B1CD00C9CC70 /* Clients */,
 				E3BE99842C3641050045D933 /* Views */,
 				E3BE99852C36410A0045D933 /* Core */,
 			);
@@ -165,6 +168,14 @@
 				E3458C822C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E3CFD8622C46B1CD00C9CC70 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +317,7 @@
 				E3458C832C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift in Sources */,
 				E3458C812C32D9A1003A08B8 /* LottoNumberGeneratorView.swift in Sources */,
 				E3BE99872C36414B0045D933 /* LottoNumberView.swift in Sources */,
+				E3CFD8642C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift in Sources */,
 				E3458C522C32D7C2003A08B8 /* LottoLocoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
