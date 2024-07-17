@@ -15,7 +15,7 @@ struct LottoLocoApp: App {
             LottoNumberGeneratorView(
                 store: Store(
                     initialState: LottoNumberGeneratorCore.State(),
-                    reducer: {LottoNumberGeneratorCore() }
+                    reducer: { LottoNumberGeneratorCore() }
                 ))
         }
     }

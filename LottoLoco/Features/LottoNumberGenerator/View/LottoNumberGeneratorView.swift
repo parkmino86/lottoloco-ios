@@ -14,7 +14,7 @@ struct LottoNumberGeneratorView: View {
 
     // MARK: - Body
     var body: some View {
-        NavigationView {
+        NavigationStack {
             WithViewStore(store, observe: { $0 }) { viewStore in
                 VStack {
                     Spacer()
@@ -29,7 +29,7 @@ struct LottoNumberGeneratorView: View {
                     Spacer()
 
                     Button(action: {
-                        viewStore.send(.generateNumbers)
+                        viewStore.send(.generateNumbersButtonTapped)
                     }) {
                         Text("새 번호 뽑기")
                             .font(.system(size: 16, weight: .bold))

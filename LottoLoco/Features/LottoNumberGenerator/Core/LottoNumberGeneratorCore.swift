@@ -18,8 +18,7 @@ struct LottoNumberGeneratorCore: Reducer {
     // MARK: - Action
     
     enum Action: Equatable {
-        case generateNumbers
-        case numbersGenerated([Int])
+        case generateNumbersButtonTapped
     }
     
     // MARK: - Dependency
@@ -31,12 +30,8 @@ struct LottoNumberGeneratorCore: Reducer {
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
-            case .generateNumbers:
-                let numbers = lottoNumberGeneratorClient.generateNumbers()
-                return .send(.numbersGenerated(numbers))
-                
-            case let .numbersGenerated(numbers):
-                state.lottoNumbers = numbers
+            case .generateNumbersButtonTapped:
+                state.lottoNumbers = lottoNumberGeneratorClient.generateNumbers()
                 return .none
             }
         }
