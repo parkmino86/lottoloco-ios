@@ -11,11 +11,13 @@ struct LottoNumberGeneratorCore: Reducer {
     struct State: Equatable {
         var lottoNumbers: [Int] = []
         var counter: Int = 0
+        var isHeaderVisible: Bool = true
     }
 
     enum Action: Equatable {
         case generateNumbersButtonTapped
         case updateCounter(Int)
+        case hideHeader
     }
 
     @Dependency(\.lottoNumberGeneratorClient) var lottoNumberGeneratorClient
@@ -29,6 +31,10 @@ struct LottoNumberGeneratorCore: Reducer {
 
             case let .updateCounter(newCounter):
                 state.counter = newCounter
+                return .none
+
+            case .hideHeader:
+                state.isHeaderVisible = false
                 return .none
             }
         }

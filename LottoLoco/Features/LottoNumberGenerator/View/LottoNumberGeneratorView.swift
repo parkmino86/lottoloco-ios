@@ -17,7 +17,9 @@ struct LottoNumberGeneratorView: View {
             WithViewStore(store, observe: { $0 }) { viewStore in
                 VStack {
                     Spacer()
-                    headerView()
+                    if viewStore.isHeaderVisible {
+                        headerView()
+                    }
                     confettiView(viewStore: viewStore)
                     lottoNumbersView(lottoNumbers: viewStore.lottoNumbers)
                     Spacer()
@@ -61,11 +63,7 @@ struct LottoNumberGeneratorView: View {
     private func lottoNumbersView(lottoNumbers: [Int]) -> some View {
         HStack {
             ForEach(lottoNumbers, id: \.self) { number in
-                Text("\(number)")
-                    .font(.title)
-                    .padding()
-                    .background(Circle().fill(Color.blue))
-                    .foregroundColor(.white)
+                LottoNumberView(number: number)
             }
         }
         .frame(maxWidth: .infinity)
@@ -75,6 +73,7 @@ struct LottoNumberGeneratorView: View {
     private func generateButton(viewStore: ViewStore<LottoNumberGeneratorCore.State, LottoNumberGeneratorCore.Action>) -> some View {
         Button(action: {
             viewStore.send(.generateNumbersButtonTapped)
+            viewStore.send(.hideHeader)
             viewStore.send(.updateCounter(viewStore.counter + 1))
         }) {
             Text("번호 생성 🚀")
