@@ -8,30 +8,27 @@
 import ComposableArchitecture
 
 struct LottoNumberGeneratorCore: Reducer {
-    
-    // MARK: - State
-    
     struct State: Equatable {
         var lottoNumbers: [Int] = []
+        var counter: Int = 0
     }
-    
-    // MARK: - Action
-    
+
     enum Action: Equatable {
         case generateNumbersButtonTapped
+        case updateCounter(Int)
     }
-    
-    // MARK: - Dependency
-    
+
     @Dependency(\.lottoNumberGeneratorClient) var lottoNumberGeneratorClient
-    
-    // MARK: - Reducer Body
-    
+
     var body: some ReducerOf<Self> {
         Reduce { state, action in
             switch action {
             case .generateNumbersButtonTapped:
                 state.lottoNumbers = lottoNumberGeneratorClient.generateNumbers()
+                return .none
+
+            case let .updateCounter(newCounter):
+                state.counter = newCounter
                 return .none
             }
         }

@@ -7,25 +7,19 @@
 
 import ComposableArchitecture
 
-// MARK: - Client
-
 struct LottoNumberGeneratorClient {
     var generateNumbers: () -> [Int]
 }
-
-// MARK: - DependencyKey
 
 extension LottoNumberGeneratorClient: DependencyKey {
     static let liveValue = LottoNumberGeneratorClient {
         (1 ... 45).shuffled().prefix(6).sorted()
     }
-    
+
     static let dummyValue = LottoNumberGeneratorClient {
-        return [1, 2, 3, 4, 5, 6]
+        [1, 2, 3, 4, 5, 6]
     }
 }
-
-// MARK: - DependencyValues
 
 extension DependencyValues {
     var lottoNumberGeneratorClient: LottoNumberGeneratorClient {

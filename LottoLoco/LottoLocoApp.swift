@@ -12,11 +12,7 @@ import SwiftUI
 struct LottoLocoApp: App {
     var body: some Scene {
         WindowGroup {
-            LottoNumberGeneratorView(
-                store: Store(
-                    initialState: LottoNumberGeneratorCore.State(),
-                    reducer: { LottoNumberGeneratorCore() }
-                ))
+            ContentView()
         }
     }
 }

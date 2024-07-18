@@ -16,8 +16,12 @@
 		E3458C7D2C32D972003A08B8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E3458C7C2C32D972003A08B8 /* ComposableArchitecture */; };
 		E3458C812C32D9A1003A08B8 /* LottoNumberGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3458C802C32D9A1003A08B8 /* LottoNumberGeneratorView.swift */; };
 		E3458C832C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3458C822C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift */; };
+		E362BE552C494840005A7C54 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E362BE542C494840005A7C54 /* ConfettiSwiftUI */; };
 		E3BE99872C36414B0045D933 /* LottoNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE99862C36414B0045D933 /* LottoNumberView.swift */; };
 		E3CFD8642C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */; };
+		E3CFD8692C48081000C9CC70 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD8682C48081000C9CC70 /* QRCodeScannerView.swift */; };
+		E3CFD86B2C48082100C9CC70 /* QRCodeScannerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD86A2C48082100C9CC70 /* QRCodeScannerCore.swift */; };
+		E3CFD86D2C48083D00C9CC70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD86C2C48083D00C9CC70 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,9 @@
 		E3458C822C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGeneratorCore.swift; sourceTree = "<group>"; };
 		E3BE99862C36414B0045D933 /* LottoNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberView.swift; sourceTree = "<group>"; };
 		E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGeneratorClient.swift; sourceTree = "<group>"; };
+		E3CFD8682C48081000C9CC70 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
+		E3CFD86A2C48082100C9CC70 /* QRCodeScannerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerCore.swift; sourceTree = "<group>"; };
+		E3CFD86C2C48083D00C9CC70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E362BE552C494840005A7C54 /* ConfettiSwiftUI in Frameworks */,
 				E3458C7D2C32D972003A08B8 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +112,7 @@
 			children = (
 				E3458C7E2C32D980003A08B8 /* Features */,
 				E3458C512C32D7C2003A08B8 /* LottoLocoApp.swift */,
+				E3CFD86C2C48083D00C9CC70 /* ContentView.swift */,
 				E3458C552C32D7C4003A08B8 /* Assets.xcassets */,
 				E3458C572C32D7C4003A08B8 /* Preview Content */,
 			);
@@ -138,6 +147,7 @@
 		E3458C7E2C32D980003A08B8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				E3CFD8652C4807E700C9CC70 /* QRCodeScanner */,
 				E3458C7F2C32D98F003A08B8 /* LottoNumberGenerator */,
 			);
 			path = Features;
@@ -170,6 +180,31 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		E3CFD8652C4807E700C9CC70 /* QRCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				E3CFD8672C4807FE00C9CC70 /* View */,
+				E3CFD8662C4807F800C9CC70 /* Core */,
+			);
+			path = QRCodeScanner;
+			sourceTree = "<group>";
+		};
+		E3CFD8662C4807F800C9CC70 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E3CFD86A2C48082100C9CC70 /* QRCodeScannerCore.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E3CFD8672C4807FE00C9CC70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3CFD8682C48081000C9CC70 /* QRCodeScannerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,6 +223,7 @@
 			name = LottoLoco;
 			packageProductDependencies = (
 				E3458C7C2C32D972003A08B8 /* ComposableArchitecture */,
+				E362BE542C494840005A7C54 /* ConfettiSwiftUI */,
 			);
 			productName = LottoLoco;
 			productReference = E3458C4E2C32D7C2003A08B8 /* LottoLoco.app */;
@@ -263,6 +299,7 @@
 			mainGroup = E3458C452C32D7C2003A08B8;
 			packageReferences = (
 				E3458C7B2C32D972003A08B8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				E362BE532C494840005A7C54 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = E3458C4F2C32D7C2003A08B8 /* Products */;
 			projectDirPath = "";
@@ -308,9 +345,12 @@
 			files = (
 				E3458C832C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift in Sources */,
 				E3458C812C32D9A1003A08B8 /* LottoNumberGeneratorView.swift in Sources */,
+				E3CFD86D2C48083D00C9CC70 /* ContentView.swift in Sources */,
 				E3BE99872C36414B0045D933 /* LottoNumberView.swift in Sources */,
 				E3CFD8642C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift in Sources */,
 				E3458C522C32D7C2003A08B8 /* LottoLocoApp.swift in Sources */,
+				E3CFD8692C48081000C9CC70 /* QRCodeScannerView.swift in Sources */,
+				E3CFD86B2C48082100C9CC70 /* QRCodeScannerCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +704,14 @@
 				minimumVersion = 1.11.2;
 			};
 		};
+		E362BE532C494840005A7C54 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -671,6 +719,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E3458C7B2C32D972003A08B8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		E362BE542C494840005A7C54 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E362BE532C494840005A7C54 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
