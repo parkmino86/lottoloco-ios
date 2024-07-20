@@ -10,14 +10,14 @@ import ComposableArchitecture
 @Reducer
 struct LottoNumberGeneratorCore {
     struct State: Equatable {
-        var lottoNumbers: [Int] = []
-        var counter: Int = 0
+        var numbers: [Int] = []
+        var generationCount: Int = 0
         var isHeaderVisible: Bool = true
     }
 
     enum Action: Equatable {
         case generateNumbersButtonTapped
-        case updateCounter(Int)
+        case updateGenerationCount(Int)
         case hideHeader
     }
 
@@ -27,11 +27,14 @@ struct LottoNumberGeneratorCore {
         Reduce { state, action in
             switch action {
             case .generateNumbersButtonTapped:
-                state.lottoNumbers = lottoNumberGeneratorClient.generateNumbers()
-                return .none
+                state.numbers = lottoNumberGeneratorClient.generateNumbers()
+                return .merge(
+                    Effect.send(.updateGenerationCount(state.generationCount + 1)),
+                    Effect.send(.hideHeader)
+                )
 
-            case let .updateCounter(newCounter):
-                state.counter = newCounter
+            case let .updateGenerationCount(newCounter):
+                state.generationCount = newCounter
                 return .none
 
             case .hideHeader:

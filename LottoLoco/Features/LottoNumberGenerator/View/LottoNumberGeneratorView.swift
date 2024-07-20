@@ -23,7 +23,7 @@ struct LottoNumberGeneratorView: View {
                     }
                     ZStack {
                         confettiView(viewStore: viewStore)
-                        lottoNumbersView(lottoNumbers: viewStore.lottoNumbers)
+                        lottoNumbersView(lottoNumbers: viewStore.numbers)
                     }
                     Spacer()
                     generateButton(viewStore: viewStore)
@@ -46,8 +46,8 @@ struct LottoNumberGeneratorView: View {
     private func confettiView(viewStore: ViewStore<LottoNumberGeneratorCore.State, LottoNumberGeneratorCore.Action>) -> some View {
         ConfettiCannon(
             counter: viewStore.binding(
-                get: \.counter,
-                send: LottoNumberGeneratorCore.Action.updateCounter
+                get: \.generationCount,
+                send: LottoNumberGeneratorCore.Action.updateGenerationCount
             ),
             confettis: [.text("💵"), .text("💶"), .text("💷"), .text("💴")],
             confettiSize: 20
@@ -68,8 +68,6 @@ struct LottoNumberGeneratorView: View {
     private func generateButton(viewStore: ViewStore<LottoNumberGeneratorCore.State, LottoNumberGeneratorCore.Action>) -> some View {
         Button(action: {
             viewStore.send(.generateNumbersButtonTapped)
-            viewStore.send(.hideHeader)
-            viewStore.send(.updateCounter(viewStore.counter + 1))
         }) {
             Text("번호 생성 🚀")
                 .font(.system(size: 16, weight: .bold))
