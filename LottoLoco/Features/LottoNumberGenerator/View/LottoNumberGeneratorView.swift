@@ -13,9 +13,21 @@ import SwiftUI
 struct LottoNumberGeneratorView: View {
     let store: StoreOf<LottoNumberGeneratorCore>
 
+    struct ViewState: Equatable {
+        let isHeaderVisible: Bool
+        let numbers: [Int]
+        let generationCount: Int
+
+        init(state: LottoNumberGeneratorCore.State) {
+            self.isHeaderVisible = state.isHeaderVisible
+            self.numbers = state.numbers
+            self.generationCount = state.generationCount
+        }
+    }
+
     var body: some View {
         NavigationStack {
-            WithViewStore(store, observe: { $0 }) { viewStore in
+            WithViewStore(store, observe: ViewState.init) { viewStore in
                 VStack {
                     Spacer()
                     if viewStore.isHeaderVisible {
@@ -43,7 +55,7 @@ struct LottoNumberGeneratorView: View {
     }
 
     @ViewBuilder
-    private func confettiView(viewStore: ViewStore<LottoNumberGeneratorCore.State, LottoNumberGeneratorCore.Action>) -> some View {
+    private func confettiView(viewStore: ViewStore<ViewState, LottoNumberGeneratorCore.Action>) -> some View {
         ConfettiCannon(
             counter: viewStore.binding(
                 get: \.generationCount,
@@ -65,7 +77,7 @@ struct LottoNumberGeneratorView: View {
     }
 
     @ViewBuilder
-    private func generateButton(viewStore: ViewStore<LottoNumberGeneratorCore.State, LottoNumberGeneratorCore.Action>) -> some View {
+    private func generateButton(viewStore: ViewStore<ViewState, LottoNumberGeneratorCore.Action>) -> some View {
         Button(action: {
             viewStore.send(.generateNumbersButtonTapped)
         }) {
