@@ -5,6 +5,7 @@
 //  Created by minoh.park on 7/1/24.
 //
 
+import Combine
 import ComposableArchitecture
 import ConfettiSwiftUI
 import SwiftUI
@@ -20,8 +21,10 @@ struct LottoNumberGeneratorView: View {
                     if viewStore.isHeaderVisible {
                         headerView()
                     }
-                    confettiView(viewStore: viewStore)
-                    lottoNumbersView(lottoNumbers: viewStore.lottoNumbers)
+                    ZStack {
+                        confettiView(viewStore: viewStore)
+                        lottoNumbersView(lottoNumbers: viewStore.lottoNumbers)
+                    }
                     Spacer()
                     generateButton(viewStore: viewStore)
                 }
@@ -46,16 +49,8 @@ struct LottoNumberGeneratorView: View {
                 get: \.counter,
                 send: LottoNumberGeneratorCore.Action.updateCounter
             ),
-            num: 50,
-            confettis: [.text("💵"), .text("💶"), .text("💷"), .text("💴"), .shape(.circle), .shape(.triangle)],
-            colors: [.blue, .red, .green, .yellow, .pink, .purple, .orange, .cyan],
-            confettiSize: 20,
-            rainHeight: 800,
-            fadesOut: true,
-            opacity: 0.8,
-            openingAngle: .degrees(30),
-            closingAngle: .degrees(150),
-            radius: 350
+            confettis: [.text("💵"), .text("💶"), .text("💷"), .text("💴")],
+            confettiSize: 20
         )
     }
 

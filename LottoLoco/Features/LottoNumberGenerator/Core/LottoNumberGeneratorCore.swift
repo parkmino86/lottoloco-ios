@@ -7,7 +7,8 @@
 
 import ComposableArchitecture
 
-struct LottoNumberGeneratorCore: Reducer {
+@Reducer
+struct LottoNumberGeneratorCore {
     struct State: Equatable {
         var lottoNumbers: [Int] = []
         var counter: Int = 0

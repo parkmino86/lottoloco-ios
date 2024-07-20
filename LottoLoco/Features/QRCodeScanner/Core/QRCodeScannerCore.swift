@@ -7,7 +7,8 @@
 
 import ComposableArchitecture
 
-struct QRCodeScannerCore: Reducer {
+@Reducer
+struct QRCodeScannerCore {
     struct State: Equatable {
         var scannedCode: String? = nil
     }
