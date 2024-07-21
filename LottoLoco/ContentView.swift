@@ -21,13 +21,13 @@ struct ContentView: View {
                 Label("", systemImage: "gift")
             }
 
-//            QRCodeScannerView(store: Store(
-//                initialState: QRCodeScannerCore.State(),
-//                reducer: { QRCodeScannerCore() }
-//            ))
-//            .tabItem {
-//                Label("", systemImage: "qrcode")
-//            }
+            QRCodeScannerView(store: Store(
+                initialState: QRCodeScannerCore.State(),
+                reducer: { QRCodeScannerCore() }
+            ))
+            .tabItem {
+                Label("", systemImage: "qrcode")
+            }
         }
     }
 }
