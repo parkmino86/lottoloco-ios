@@ -19,9 +19,9 @@ struct LottoNumberGeneratorView: View {
         let generationCount: Int
 
         init(state: LottoNumberGeneratorCore.State) {
-            self.isHeaderVisible = state.isHeaderVisible
-            self.numbers = state.numbers
-            self.generationCount = state.generationCount
+            isHeaderVisible = state.isHeaderVisible
+            numbers = state.numbers
+            generationCount = state.generationCount
         }
     }
 

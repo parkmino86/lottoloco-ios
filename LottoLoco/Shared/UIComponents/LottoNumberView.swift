@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct LottoNumberView: View {
-    let number: Int
+public struct LottoNumberView: View {
+    public let number: Int
+    public var size: CGFloat
 
     private var numberColor: Color {
         switch number {
@@ -27,11 +28,16 @@ struct LottoNumberView: View {
         }
     }
 
-    var body: some View {
+    public init(number: Int, size: CGFloat = 48) {
+        self.number = number
+        self.size = size
+    }
+
+    public var body: some View {
         Text("\(number)")
-            .font(.title2)
+            .font(.system(size: size * 0.5))
             .fontWeight(.bold)
-            .frame(width: 48, height: 48)
+            .frame(width: size, height: size)
             .background(numberColor)
             .foregroundColor(.white)
             .clipShape(Circle())

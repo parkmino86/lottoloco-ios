@@ -13,7 +13,7 @@ struct LottoNumberGeneratorClient {
 
 extension LottoNumberGeneratorClient: DependencyKey {
     static let liveValue = LottoNumberGeneratorClient {
-        (1 ... 45).shuffled().prefix(6).sorted()
+        LottoNumberGenerator.generateNumbers()
     }
 
     static let dummyValue = LottoNumberGeneratorClient {

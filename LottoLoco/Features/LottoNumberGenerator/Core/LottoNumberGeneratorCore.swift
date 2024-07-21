@@ -29,8 +29,8 @@ struct LottoNumberGeneratorCore {
             case .generateNumbersButtonTapped:
                 state.numbers = lottoNumberGeneratorClient.generateNumbers()
                 return .merge(
-                    Effect.send(.updateGenerationCount(state.generationCount + 1)),
-                    Effect.send(.hideHeader)
+                    .send(.updateGenerationCount(state.generationCount + 1)),
+                    .send(.hideHeader)
                 )
 
             case let .updateGenerationCount(newCounter):

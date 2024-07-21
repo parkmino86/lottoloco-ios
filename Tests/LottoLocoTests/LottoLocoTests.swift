@@ -1,5 +1,5 @@
-import XCTest
 @testable import LottoLoco
+import XCTest
 
 final class LottoLocoTests: XCTestCase {
     func testExample() throws {
