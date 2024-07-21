@@ -19,19 +19,23 @@ struct LottoNumberGeneratorEntryView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.secondary)
             }
-            Spacer()
             Text("오늘의 행운 번호는")
                 .font(.headline)
                 .fontWeight(.bold)
             HStack(spacing: 4) {
                 ForEach(entry.numbers, id: \.self) { number in
-                    LottoNumberView(number: number, size: 20)
+                    LottoNumberView(number: number, size: 20)                        
                 }
             }
             Text("입니다.")
                 .font(.headline)
                 .fontWeight(.bold)
-            Spacer()
+            HStack {
+                Spacer()
+                Button(intent: LottoNumberGeneratorIntent()) {
+                    Image(systemName: "arrow.clockwise")
+                }
+            }
         }
         .containerBackground(.clear, for: .widget)
     }
