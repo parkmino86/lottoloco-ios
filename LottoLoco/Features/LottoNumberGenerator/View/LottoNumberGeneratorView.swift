@@ -52,6 +52,7 @@ struct LottoNumberGeneratorView: View {
         Text("🎲 행운의 로또 번호를 생성하세요!")
             .font(.headline)
             .padding()
+            .shimmer()
     }
 
     @ViewBuilder
@@ -86,7 +87,7 @@ struct LottoNumberGeneratorView: View {
                 .frame(maxWidth: .infinity)
                 .padding()
         }
-        .background(Color.blue)
+        .applyBluePurpleGradientBackground()
         .foregroundColor(.white)
         .cornerRadius(8)
     }

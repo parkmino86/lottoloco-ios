@@ -32,11 +32,20 @@
 		E3758FB52C4CC3E1005C335E /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3758FB32C4CC247005C335E /* Date+Extensions.swift */; };
 		E3758FC82C4CCF49005C335E /* LottoNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3758FC72C4CCF49005C335E /* LottoNumberGenerator.swift */; };
 		E3758FC92C4CCF5B005C335E /* LottoNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3758FC72C4CCF49005C335E /* LottoNumberGenerator.swift */; };
+		E3AADD172C4D37F300B78531 /* GradientBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD162C4D37F300B78531 /* GradientBackgroundModifier.swift */; };
+		E3AADD1A2C4D388300B78531 /* BluePurpleGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD192C4D388300B78531 /* BluePurpleGradientBackground.swift */; };
+		E3AADD1B2C4D388500B78531 /* BluePurpleGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD192C4D388300B78531 /* BluePurpleGradientBackground.swift */; };
+		E3AADD1D2C4D389500B78531 /* RedYellowGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD1C2C4D389500B78531 /* RedYellowGradientBackground.swift */; };
+		E3AADD1E2C4D389C00B78531 /* RedYellowGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD1C2C4D389500B78531 /* RedYellowGradientBackground.swift */; };
+		E3AADD202C4D38A600B78531 /* GreenBlueGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD1F2C4D38A600B78531 /* GreenBlueGradientBackground.swift */; };
+		E3AADD212C4D38AC00B78531 /* GreenBlueGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD1F2C4D38A600B78531 /* GreenBlueGradientBackground.swift */; };
+		E3AADD222C4D391F00B78531 /* GradientBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD162C4D37F300B78531 /* GradientBackgroundModifier.swift */; };
 		E3BE99872C36414B0045D933 /* LottoNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE99862C36414B0045D933 /* LottoNumberView.swift */; };
 		E3CFD8642C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */; };
 		E3CFD8692C48081000C9CC70 /* QRCodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD8682C48081000C9CC70 /* QRCodeScannerView.swift */; };
 		E3CFD86B2C48082100C9CC70 /* QRCodeScannerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD86A2C48082100C9CC70 /* QRCodeScannerCore.swift */; };
 		E3CFD86D2C48083D00C9CC70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD86C2C48083D00C9CC70 /* ContentView.swift */; };
+		E3E012922C4FDCC200B2824E /* ShimmerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E012912C4FDCC200B2824E /* ShimmerModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,11 +111,16 @@
 		E3758FAB2C4CAAC5005C335E /* LottoNumberGeneratorEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGeneratorEntry.swift; sourceTree = "<group>"; };
 		E3758FB32C4CC247005C335E /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E3758FC72C4CCF49005C335E /* LottoNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGenerator.swift; sourceTree = "<group>"; };
+		E3AADD162C4D37F300B78531 /* GradientBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundModifier.swift; sourceTree = "<group>"; };
+		E3AADD192C4D388300B78531 /* BluePurpleGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePurpleGradientBackground.swift; sourceTree = "<group>"; };
+		E3AADD1C2C4D389500B78531 /* RedYellowGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedYellowGradientBackground.swift; sourceTree = "<group>"; };
+		E3AADD1F2C4D38A600B78531 /* GreenBlueGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenBlueGradientBackground.swift; sourceTree = "<group>"; };
 		E3BE99862C36414B0045D933 /* LottoNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberView.swift; sourceTree = "<group>"; };
 		E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGeneratorClient.swift; sourceTree = "<group>"; };
 		E3CFD8682C48081000C9CC70 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
 		E3CFD86A2C48082100C9CC70 /* QRCodeScannerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerCore.swift; sourceTree = "<group>"; };
 		E3CFD86C2C48083D00C9CC70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E3E012912C4FDCC200B2824E /* ShimmerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,8 +357,29 @@
 		E3758FCC2C4CD1CD005C335E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				E3AADD152C4D37E000B78531 /* Modifiers */,
+				E3AADD182C4D385900B78531 /* Gradients */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		E3AADD152C4D37E000B78531 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				E3AADD162C4D37F300B78531 /* GradientBackgroundModifier.swift */,
+				E3E012912C4FDCC200B2824E /* ShimmerModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		E3AADD182C4D385900B78531 /* Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				E3AADD192C4D388300B78531 /* BluePurpleGradientBackground.swift */,
+				E3AADD1C2C4D389500B78531 /* RedYellowGradientBackground.swift */,
+				E3AADD1F2C4D38A600B78531 /* GreenBlueGradientBackground.swift */,
+			);
+			path = Gradients;
 			sourceTree = "<group>";
 		};
 		E3BE99842C3641050045D933 /* View */ = {
@@ -558,15 +593,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3458C832C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift in Sources */,
+				E3AADD172C4D37F300B78531 /* GradientBackgroundModifier.swift in Sources */,
 				E3758FC82C4CCF49005C335E /* LottoNumberGenerator.swift in Sources */,
+				E3AADD1D2C4D389500B78531 /* RedYellowGradientBackground.swift in Sources */,
 				E3458C812C32D9A1003A08B8 /* LottoNumberGeneratorView.swift in Sources */,
+				E3E012922C4FDCC200B2824E /* ShimmerModifier.swift in Sources */,
 				E3CFD86D2C48083D00C9CC70 /* ContentView.swift in Sources */,
+				E3AADD1A2C4D388300B78531 /* BluePurpleGradientBackground.swift in Sources */,
 				E3BE99872C36414B0045D933 /* LottoNumberView.swift in Sources */,
 				E3CFD8642C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift in Sources */,
 				E3458C522C32D7C2003A08B8 /* LottoLocoApp.swift in Sources */,
 				E3CFD8692C48081000C9CC70 /* QRCodeScannerView.swift in Sources */,
 				E3758FB42C4CC247005C335E /* Date+Extensions.swift in Sources */,
 				E3CFD86B2C48082100C9CC70 /* QRCodeScannerCore.swift in Sources */,
+				E3AADD202C4D38A600B78531 /* GreenBlueGradientBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,13 +631,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3AADD222C4D391F00B78531 /* GradientBackgroundModifier.swift in Sources */,
 				E3758FAC2C4CAAC5005C335E /* LottoNumberGeneratorEntry.swift in Sources */,
+				E3AADD1E2C4D389C00B78531 /* RedYellowGradientBackground.swift in Sources */,
 				E3758FB52C4CC3E1005C335E /* Date+Extensions.swift in Sources */,
 				E3758F962C4CA64F005C335E /* LottoNumberGeneratorWidget.swift in Sources */,
 				E3758FC92C4CCF5B005C335E /* LottoNumberGenerator.swift in Sources */,
 				E3758FAD2C4CB212005C335E /* LottoNumberView.swift in Sources */,
+				E3AADD1B2C4D388500B78531 /* BluePurpleGradientBackground.swift in Sources */,
 				E3758F982C4CA64F005C335E /* LottoNumberGeneratorIntent.swift in Sources */,
 				E3758FA82C4CAAB0005C335E /* LottoNumberGeneratorEntryView.swift in Sources */,
+				E3AADD212C4D38AC00B78531 /* GreenBlueGradientBackground.swift in Sources */,
 				E3758FAA2C4CAABC005C335E /* LottoNumberGeneratorProvider.swift in Sources */,
 				E3758F922C4CA64F005C335E /* LottoLocoWidgetBundle.swift in Sources */,
 			);
