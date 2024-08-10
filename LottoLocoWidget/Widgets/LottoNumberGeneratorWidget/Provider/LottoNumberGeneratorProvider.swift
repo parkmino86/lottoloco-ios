@@ -18,7 +18,10 @@ struct LottoNumberGeneratorProvider: AppIntentTimelineProvider {
     }
 
     func timeline(for _: LottoNumberGeneratorIntent, in _: Context) async -> Timeline<LottoNumberGeneratorEntry> {
-        let entry = LottoNumberGeneratorEntry(date: Date(), numbers: LottoNumberGenerator.generateNumbers())
-        return Timeline(entries: [entry], policy: .never)
+        let currentDate = Date()
+        let nextDate = Calendar.current.nextDate(after: currentDate, matching: DateComponents(hour: 0), matchingPolicy: .nextTime)!
+
+        let entry = LottoNumberGeneratorEntry(date: currentDate, numbers: LottoNumberGenerator.generateNumbers())
+        return Timeline(entries: [entry], policy: .after(nextDate))
     }
 }
