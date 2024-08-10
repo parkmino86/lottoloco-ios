@@ -232,8 +232,8 @@
 		E3458C7F2C32D98F003A08B8 /* LottoNumberGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				E3BE99842C3641050045D933 /* View */,
-				E3BE99852C36410A0045D933 /* Core */,
+				E3458C802C32D9A1003A08B8 /* LottoNumberGeneratorView.swift */,
+				E3458C822C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift */,
 			);
 			path = LottoNumberGenerator;
 			sourceTree = "<group>";
@@ -382,45 +382,13 @@
 			path = Gradients;
 			sourceTree = "<group>";
 		};
-		E3BE99842C3641050045D933 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E3458C802C32D9A1003A08B8 /* LottoNumberGeneratorView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E3BE99852C36410A0045D933 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				E3458C822C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		E3CFD8652C4807E700C9CC70 /* QRCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
-				E3CFD8672C4807FE00C9CC70 /* View */,
-				E3CFD8662C4807F800C9CC70 /* Core */,
-			);
-			path = QRCodeScanner;
-			sourceTree = "<group>";
-		};
-		E3CFD8662C4807F800C9CC70 /* Core */ = {
-			isa = PBXGroup;
-			children = (
+				E3CFD8682C48081000C9CC70 /* QRCodeScannerView.swift */,
 				E3CFD86A2C48082100C9CC70 /* QRCodeScannerCore.swift */,
 			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		E3CFD8672C4807FE00C9CC70 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E3CFD8682C48081000C9CC70 /* QRCodeScannerView.swift */,
-			);
-			path = View;
+			path = QRCodeScanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
