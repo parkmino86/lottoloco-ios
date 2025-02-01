@@ -16,12 +16,10 @@ struct LottoNumberGeneratorView: View {
     struct ViewState: Equatable {
         let isHeaderVisible: Bool
         let numbers: [Int]
-        let generationCount: Int
 
         init(state: LottoNumberGeneratorCore.State) {
             isHeaderVisible = state.isHeaderVisible
             numbers = state.numbers
-            generationCount = state.generationCount
         }
     }
 
@@ -34,7 +32,6 @@ struct LottoNumberGeneratorView: View {
                         headerView()
                     }
                     ZStack {
-                        confettiView(viewStore: viewStore)
                         lottoNumbersView(lottoNumbers: viewStore.numbers)
                     }
                     Spacer()
@@ -53,18 +50,6 @@ struct LottoNumberGeneratorView: View {
             .font(.headline)
             .padding()
             .shimmer()
-    }
-
-    @ViewBuilder
-    private func confettiView(viewStore: ViewStore<ViewState, LottoNumberGeneratorCore.Action>) -> some View {
-        ConfettiCannon(
-            counter: viewStore.binding(
-                get: \.generationCount,
-                send: LottoNumberGeneratorCore.Action.updateGenerationCount
-            ),
-            confettis: [.text("💵"), .text("💶"), .text("💷"), .text("💴")],
-            confettiSize: 20
-        )
     }
 
     @ViewBuilder

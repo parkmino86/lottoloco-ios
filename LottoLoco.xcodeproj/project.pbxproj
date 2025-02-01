@@ -16,7 +16,6 @@
 		E3458C7D2C32D972003A08B8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = E3458C7C2C32D972003A08B8 /* ComposableArchitecture */; };
 		E3458C812C32D9A1003A08B8 /* LottoNumberGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3458C802C32D9A1003A08B8 /* LottoNumberGeneratorView.swift */; };
 		E3458C832C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3458C822C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift */; };
-		E362BE552C494840005A7C54 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E362BE542C494840005A7C54 /* ConfettiSwiftUI */; };
 		E3758F8D2C4CA64F005C335E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3758F8C2C4CA64F005C335E /* WidgetKit.framework */; };
 		E3758F8F2C4CA64F005C335E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3758F8E2C4CA64F005C335E /* SwiftUI.framework */; };
 		E3758F922C4CA64F005C335E /* LottoLocoWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3758F912C4CA64F005C335E /* LottoLocoWidgetBundle.swift */; };
@@ -33,12 +32,6 @@
 		E3758FC82C4CCF49005C335E /* LottoNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3758FC72C4CCF49005C335E /* LottoNumberGenerator.swift */; };
 		E3758FC92C4CCF5B005C335E /* LottoNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3758FC72C4CCF49005C335E /* LottoNumberGenerator.swift */; };
 		E3AADD172C4D37F300B78531 /* GradientBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD162C4D37F300B78531 /* GradientBackgroundModifier.swift */; };
-		E3AADD1A2C4D388300B78531 /* BluePurpleGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD192C4D388300B78531 /* BluePurpleGradientBackground.swift */; };
-		E3AADD1B2C4D388500B78531 /* BluePurpleGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD192C4D388300B78531 /* BluePurpleGradientBackground.swift */; };
-		E3AADD1D2C4D389500B78531 /* RedYellowGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD1C2C4D389500B78531 /* RedYellowGradientBackground.swift */; };
-		E3AADD1E2C4D389C00B78531 /* RedYellowGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD1C2C4D389500B78531 /* RedYellowGradientBackground.swift */; };
-		E3AADD202C4D38A600B78531 /* GreenBlueGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD1F2C4D38A600B78531 /* GreenBlueGradientBackground.swift */; };
-		E3AADD212C4D38AC00B78531 /* GreenBlueGradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD1F2C4D38A600B78531 /* GreenBlueGradientBackground.swift */; };
 		E3AADD222C4D391F00B78531 /* GradientBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AADD162C4D37F300B78531 /* GradientBackgroundModifier.swift */; };
 		E3BE99872C36414B0045D933 /* LottoNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BE99862C36414B0045D933 /* LottoNumberView.swift */; };
 		E3CFD8642C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */; };
@@ -112,9 +105,6 @@
 		E3758FB32C4CC247005C335E /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		E3758FC72C4CCF49005C335E /* LottoNumberGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGenerator.swift; sourceTree = "<group>"; };
 		E3AADD162C4D37F300B78531 /* GradientBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundModifier.swift; sourceTree = "<group>"; };
-		E3AADD192C4D388300B78531 /* BluePurpleGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePurpleGradientBackground.swift; sourceTree = "<group>"; };
-		E3AADD1C2C4D389500B78531 /* RedYellowGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedYellowGradientBackground.swift; sourceTree = "<group>"; };
-		E3AADD1F2C4D38A600B78531 /* GreenBlueGradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenBlueGradientBackground.swift; sourceTree = "<group>"; };
 		E3BE99862C36414B0045D933 /* LottoNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberView.swift; sourceTree = "<group>"; };
 		E3CFD8632C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoNumberGeneratorClient.swift; sourceTree = "<group>"; };
 		E3CFD8682C48081000C9CC70 /* QRCodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerView.swift; sourceTree = "<group>"; };
@@ -128,7 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E362BE552C494840005A7C54 /* ConfettiSwiftUI in Frameworks */,
 				E3458C7D2C32D972003A08B8 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				E3AADD152C4D37E000B78531 /* Modifiers */,
-				E3AADD182C4D385900B78531 /* Gradients */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -370,16 +358,6 @@
 				E3E012912C4FDCC200B2824E /* ShimmerModifier.swift */,
 			);
 			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		E3AADD182C4D385900B78531 /* Gradients */ = {
-			isa = PBXGroup;
-			children = (
-				E3AADD192C4D388300B78531 /* BluePurpleGradientBackground.swift */,
-				E3AADD1C2C4D389500B78531 /* RedYellowGradientBackground.swift */,
-				E3AADD1F2C4D38A600B78531 /* GreenBlueGradientBackground.swift */,
-			);
-			path = Gradients;
 			sourceTree = "<group>";
 		};
 		E3CFD8652C4807E700C9CC70 /* QRCodeScanner */ = {
@@ -411,7 +389,6 @@
 			name = LottoLoco;
 			packageProductDependencies = (
 				E3458C7C2C32D972003A08B8 /* ComposableArchitecture */,
-				E362BE542C494840005A7C54 /* ConfettiSwiftUI */,
 			);
 			productName = LottoLoco;
 			productReference = E3458C4E2C32D7C2003A08B8 /* LottoLoco.app */;
@@ -507,7 +484,6 @@
 			mainGroup = E3458C452C32D7C2003A08B8;
 			packageReferences = (
 				E3458C7B2C32D972003A08B8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				E362BE532C494840005A7C54 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = E3458C4F2C32D7C2003A08B8 /* Products */;
 			projectDirPath = "";
@@ -563,18 +539,15 @@
 				E3458C832C32D9AB003A08B8 /* LottoNumberGeneratorCore.swift in Sources */,
 				E3AADD172C4D37F300B78531 /* GradientBackgroundModifier.swift in Sources */,
 				E3758FC82C4CCF49005C335E /* LottoNumberGenerator.swift in Sources */,
-				E3AADD1D2C4D389500B78531 /* RedYellowGradientBackground.swift in Sources */,
 				E3458C812C32D9A1003A08B8 /* LottoNumberGeneratorView.swift in Sources */,
 				E3E012922C4FDCC200B2824E /* ShimmerModifier.swift in Sources */,
 				E3CFD86D2C48083D00C9CC70 /* ContentView.swift in Sources */,
-				E3AADD1A2C4D388300B78531 /* BluePurpleGradientBackground.swift in Sources */,
 				E3BE99872C36414B0045D933 /* LottoNumberView.swift in Sources */,
 				E3CFD8642C46B1DD00C9CC70 /* LottoNumberGeneratorClient.swift in Sources */,
 				E3458C522C32D7C2003A08B8 /* LottoLocoApp.swift in Sources */,
 				E3CFD8692C48081000C9CC70 /* QRCodeScannerView.swift in Sources */,
 				E3758FB42C4CC247005C335E /* Date+Extensions.swift in Sources */,
 				E3CFD86B2C48082100C9CC70 /* QRCodeScannerCore.swift in Sources */,
-				E3AADD202C4D38A600B78531 /* GreenBlueGradientBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,15 +574,12 @@
 			files = (
 				E3AADD222C4D391F00B78531 /* GradientBackgroundModifier.swift in Sources */,
 				E3758FAC2C4CAAC5005C335E /* LottoNumberGeneratorEntry.swift in Sources */,
-				E3AADD1E2C4D389C00B78531 /* RedYellowGradientBackground.swift in Sources */,
 				E3758FB52C4CC3E1005C335E /* Date+Extensions.swift in Sources */,
 				E3758F962C4CA64F005C335E /* LottoNumberGeneratorWidget.swift in Sources */,
 				E3758FC92C4CCF5B005C335E /* LottoNumberGenerator.swift in Sources */,
 				E3758FAD2C4CB212005C335E /* LottoNumberView.swift in Sources */,
-				E3AADD1B2C4D388500B78531 /* BluePurpleGradientBackground.swift in Sources */,
 				E3758F982C4CA64F005C335E /* LottoNumberGeneratorIntent.swift in Sources */,
 				E3758FA82C4CAAB0005C335E /* LottoNumberGeneratorEntryView.swift in Sources */,
-				E3AADD212C4D38AC00B78531 /* GreenBlueGradientBackground.swift in Sources */,
 				E3758FAA2C4CAABC005C335E /* LottoNumberGeneratorProvider.swift in Sources */,
 				E3758F922C4CA64F005C335E /* LottoLocoWidgetBundle.swift in Sources */,
 			);
@@ -1020,14 +990,6 @@
 				minimumVersion = 1.11.2;
 			};
 		};
-		E362BE532C494840005A7C54 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1035,11 +997,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E3458C7B2C32D972003A08B8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
-		};
-		E362BE542C494840005A7C54 /* ConfettiSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E362BE532C494840005A7C54 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
-			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

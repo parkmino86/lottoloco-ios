@@ -11,13 +11,11 @@ import ComposableArchitecture
 struct LottoNumberGeneratorCore {
     struct State: Equatable {
         var numbers: [Int] = []
-        var generationCount: Int = 0
         var isHeaderVisible: Bool = true
     }
 
     enum Action: Equatable {
         case generateNumbersButtonTapped
-        case updateGenerationCount(Int)
         case hideHeader
     }
 
@@ -28,14 +26,7 @@ struct LottoNumberGeneratorCore {
             switch action {
             case .generateNumbersButtonTapped:
                 state.numbers = lottoNumberGeneratorClient.generateNumbers()
-                return .merge(
-                    .send(.updateGenerationCount(state.generationCount + 1)),
-                    .send(.hideHeader)
-                )
-
-            case let .updateGenerationCount(newCounter):
-                state.generationCount = newCounter
-                return .none
+                return .send(.hideHeader)
 
             case .hideHeader:
                 state.isHeaderVisible = false
