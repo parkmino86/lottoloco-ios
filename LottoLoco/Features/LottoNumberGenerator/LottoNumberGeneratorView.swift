@@ -29,6 +29,7 @@ struct LottoNumberGeneratorView: View {
                     case .generating:
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle())
+                            .tint(.white)
                             .padding()
 
                     case .completed:
