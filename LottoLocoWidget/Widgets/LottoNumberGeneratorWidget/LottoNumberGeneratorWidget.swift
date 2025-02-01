@@ -19,7 +19,7 @@ struct LottoNumberGeneratorWidget: Widget {
             LottoNumberGeneratorEntryView(entry: entry)
         }
         .configurationDisplayName("행운의 로또 번호")
-        .description("🍀 행운의 번호로 오늘을 시작하세요! 🌟")
+        .description("행운의 번호로 오늘을 시작하세요!")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }

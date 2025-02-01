@@ -15,12 +15,12 @@ struct LottoNumberGeneratorEntryView: View {
         VStack(alignment: .leading, spacing: 4) {
             HStack {
                 Text("\(entry.date.dayOfWeekString)")
-                    .font(.system(size: 16))
+                    .font(.subheadline)
                     .fontWeight(.bold)
                     .foregroundColor(Color.white.opacity(0.7))
             }
             Text("오늘의 행운 번호는")
-                .font(.system(size: 18))
+                .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
             HStack(spacing: 4) {
@@ -29,7 +29,7 @@ struct LottoNumberGeneratorEntryView: View {
                 }
             }
             Text("입니다.")
-                .font(.system(size: 18))
+                .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
             HStack {
@@ -39,7 +39,6 @@ struct LottoNumberGeneratorEntryView: View {
                 }
             }
         }
-        .padding(0)
         .containerBackground(.black, for: .widget)
     }
 }
