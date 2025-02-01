@@ -7,74 +7,73 @@
 
 import Combine
 import ComposableArchitecture
-import ConfettiSwiftUI
 import SwiftUI
 
 struct LottoNumberGeneratorView: View {
     let store: StoreOf<LottoNumberGeneratorCore>
 
-    struct ViewState: Equatable {
-        let isHeaderVisible: Bool
-        let numbers: [Int]
-
-        init(state: LottoNumberGeneratorCore.State) {
-            isHeaderVisible = state.isHeaderVisible
-            numbers = state.numbers
-        }
-    }
-
     var body: some View {
         NavigationStack {
-            WithViewStore(store, observe: ViewState.init) { viewStore in
-                VStack {
+            WithViewStore(store, observe: { $0 }) { viewStore in
+                VStack(spacing: 20) {
                     Spacer()
-                    if viewStore.isHeaderVisible {
-                        headerView()
+                    
+                    switch viewStore.viewState {
+                    case .appear:
+                        Text("🎲 행운의 로또 번호를 생성하세요!")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .shimmer()
+
+                    case .generating:
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .padding()
+
+                    case .completed:
+                        Text("🎉 당신의 행운 번호!")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                        HStack {
+                            ForEach(viewStore.numbers, id: \.self) { number in
+                                LottoNumberView(number: number)
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
                     }
-                    ZStack {
-                        lottoNumbersView(lottoNumbers: viewStore.numbers)
-                    }
+
                     Spacer()
-                    generateButton(viewStore: viewStore)
+
+                    Button {
+                        viewStore.send(.generateNumbersButtonTapped)
+                    } label: {
+                        Text(viewStore.buttonTitle)
+                            .font(.system(size: 16, weight: .bold))
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(LinearGradient(
+                                        colors: [.blue, .purple],
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    ))
+                            )
+                            .foregroundColor(.white)
+                    }
+                    .padding(.top, 10)
+                    .contentShape(Rectangle())
+                    .disabled(viewStore.isButtonDisabled)
                 }
                 .safeAreaPadding()
+                .background(Color.black)
                 .navigationTitle("오늘의 행운 번호")
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbarBackground(Color.black, for: .navigationBar)
             }
         }
-    }
-
-    @ViewBuilder
-    private func headerView() -> some View {
-        Text("🎲 행운의 로또 번호를 생성하세요!")
-            .font(.headline)
-            .padding()
-            .shimmer()
-    }
-
-    @ViewBuilder
-    private func lottoNumbersView(lottoNumbers: [Int]) -> some View {
-        HStack {
-            ForEach(lottoNumbers, id: \.self) { number in
-                LottoNumberView(number: number)
-            }
-        }
-        .frame(maxWidth: .infinity)
-    }
-
-    @ViewBuilder
-    private func generateButton(viewStore: ViewStore<ViewState, LottoNumberGeneratorCore.Action>) -> some View {
-        Button(action: {
-            viewStore.send(.generateNumbersButtonTapped)
-        }) {
-            Text("번호 생성 🚀")
-                .font(.system(size: 16, weight: .bold))
-                .frame(maxWidth: .infinity)
-                .padding()
-        }
-        .applyBluePurpleGradientBackground()
-        .foregroundColor(.white)
-        .cornerRadius(8)
     }
 }
 

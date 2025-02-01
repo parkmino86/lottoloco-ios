@@ -6,17 +6,27 @@
 //
 
 import ComposableArchitecture
+import Combine
+import Foundation
 
 @Reducer
 struct LottoNumberGeneratorCore {
+    enum ViewState: Equatable {
+        case appear
+        case generating
+        case completed
+    }
+
     struct State: Equatable {
         var numbers: [Int] = []
-        var isHeaderVisible: Bool = true
+        var viewState: ViewState = .appear
+        var buttonTitle: String = "번호 생성 🚀"
+        var isButtonDisabled: Bool = false
     }
 
     enum Action: Equatable {
         case generateNumbersButtonTapped
-        case hideHeader
+        case numbersGenerated([Int])
     }
 
     @Dependency(\.lottoNumberGeneratorClient) var lottoNumberGeneratorClient
@@ -25,11 +35,22 @@ struct LottoNumberGeneratorCore {
         Reduce { state, action in
             switch action {
             case .generateNumbersButtonTapped:
-                state.numbers = lottoNumberGeneratorClient.generateNumbers()
-                return .send(.hideHeader)
+                state.viewState = .generating
+                state.buttonTitle = "생성 중..."
+                state.isButtonDisabled = true
+                
+                return .publisher {
+                    Just(lottoNumberGeneratorClient.generateNumbers())
+                        .delay(for: .seconds(1), scheduler: DispatchQueue.main)
+                        .map(Action.numbersGenerated)
+                        .eraseToAnyPublisher()
+                }
 
-            case .hideHeader:
-                state.isHeaderVisible = false
+            case let .numbersGenerated(numbers):
+                state.numbers = numbers
+                state.viewState = .completed
+                state.buttonTitle = "다시 생성 🔄"
+                state.isButtonDisabled = false
                 return .none
             }
         }

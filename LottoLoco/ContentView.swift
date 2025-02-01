@@ -17,17 +17,17 @@ struct ContentView: View {
                     reducer: { LottoNumberGeneratorCore() }
                 )
             )
-            .tabItem {
-                Label("", systemImage: "gift")
-            }
-
-            QRCodeScannerView(store: Store(
-                initialState: QRCodeScannerCore.State(),
-                reducer: { QRCodeScannerCore() }
-            ))
-            .tabItem {
-                Label("", systemImage: "qrcode")
-            }
+//            .tabItem {
+//                Label("", systemImage: "gift")
+//            }
+//
+//            QRCodeScannerView(store: Store(
+//                initialState: QRCodeScannerCore.State(),
+//                reducer: { QRCodeScannerCore() }
+//            ))
+//            .tabItem {
+//                Label("", systemImage: "qrcode")
+//            }
         }
     }
 }
